@@ -1,0 +1,19 @@
+//breadcrumb
+.breadcrumb {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0 0 0;
+  margin: $base__spacing 0 0 0;
+  .current {
+      padding: 0;
+      display: inline-block;        
+    }
+  a {
+    @extend .current;
+     &::after {
+       content:"/";
+       margin: 0 5px;
+    }
+  }
+}

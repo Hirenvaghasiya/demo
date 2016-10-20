@@ -1,0 +1,42 @@
+.site-footer {
+    border-top: 1px solid $color__gray;
+    .footer-widget-region {
+        clear: both;
+        display: block;
+    }
+    .scroll-top,
+    .social-url {
+        clear: both;
+        display: block;
+        text-align: center;
+    }
+    .site-info {
+        text-align: center;
+        font-size: .9em;
+        padding: $base__spacing 0;
+    }
+    .footer-text {
+        @extend .site-info;
+        border:none;
+        padding-top: 0;
+    }
+    .scroll-top {
+        text-align: center;
+        margin-top: $base__spacing;
+        border-bottom: 1px solid rgba(255,255,255,.05);
+        #scrolltop {
+            border-left: 1px solid rgba(255,255,255,.05);
+            border-right: 1px solid rgba(255,255,255,.05);
+            @include font-size(1.1);
+            padding: 5px 10px;
+            display: inline-block;
+        }
+    }
+    .social-url {
+        a {
+            font-size: 1.1em;
+            margin: 1em .5em;
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	display: block;
+}
+//comment
+.dark {
+     .comments-area {
+         .comment-list {
+            .comment {
+                .comment-body {
+                    background: rgba(0,0,0,.1);
+                }
+            }
+        } 
+    } 
+}
+.comments-area {
+    margin: 3em 0;
+    .comment-reply-title {
+        font-weight: 400;
+    }
+    .comment-list {
+        margin-left: 0;
+        .children {
+            padding: 0;
+            margin: 0 0 0 40px;
+            position: relative;
+            &:before {
+                font-family: 'simple-line-icons';
+                content: "\e051";
+                transform: rotate(-90deg) scale(1) skew(1deg) translate(0px);
+                -webkit-transform: rotate(-90deg) scale(1) skew(1deg) translate(0px);
+                -moz-transform: rotate(-90deg) scale(1) skew(1deg) translate(0px);
+                -o-transform: rotate(-90deg) scale(1) skew(1deg) translate(0px);
+                -ms-transform: rotate(-90deg) scale(1) skew(1deg) translate(0px);
+                position: absolute;
+                left: -30px;
+                top: 5px
+            }
+        }
+        .comment {
+            list-style: none;
+            .comment-body {
+                background: rgba(255,255,255,.9);
+                border: 1px solid $color__gray;
+                padding: 15px;
+                margin: 25px 0;
+            }
+            .comment-content {
+                padding: 10px 0 0 0;
+            }
+            .reply {
+                @include font-size(.93);
+            }
+            .comment-meta {
+                .comment-author {
+                    .avatar {
+                        @include padding(0);
+                        @include margin(5px 10px 5px 0);
+                        float: left
+                    }
+                }
+                .comment-metadata {
+                font-size: 0.9em;
+                    a {
+                        clear: right;
+                    }
+                }
+            }
+        }
+    }
+    .comment-form {
+        label {
+            min-width: 60px;
+            display: inline-block;
+        }
+    }
+}

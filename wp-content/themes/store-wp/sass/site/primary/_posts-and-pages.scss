@@ -1,0 +1,159 @@
+/*-----------------------------
+# Singular
+------------------------------*/
+.entry-title { 
+}
+
+//entry-meta
+.page {
+    .entry-meta { 
+        display: none;
+    }
+}
+.entry-meta {
+    display: inline-block;
+    width: 100%;
+    clear: both;
+    @include font-size(.9);
+    .byline {
+    }
+    .posted-on {
+        margin-right: 5px;
+    }
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+//entry-footer
+.entry-footer {
+    @extend .entry-meta;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-top: 1px dotted $color__gray;
+    border-bottom: 2px solid;
+    .cat-links {
+        margin-right: 10px;
+        &:before {
+            font-family: 'simple-line-icons';
+            content: '\e089';
+            margin-right: 5px;
+        }
+    }
+    .tags-links {
+        margin-right: 10px;
+        &:before {
+            font-family: 'simple-line-icons';
+            content: '\e055';
+            margin-right: 5px;
+        }
+    }
+    .comments-link {
+        margin-right: 10px;
+        &:before {
+            font-family: 'simple-line-icons';
+            content: '\e07d';
+            margin-right: 5px;
+        }
+    }
+    .edit-link {
+        &:before {
+            font-family: 'simple-line-icons';
+            content: '\e05f';
+            margin-right: 5px;
+        }
+    } 
+}
+//content
+.featured-img {
+    margin-bottom: 10px;
+    @include border-radius(3px);
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+/*-----------------------------
+# Posts format
+------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+    display: none;
+}
+.format-chat .entry-content {
+    padding:1.5em;
+    background: #f6f6f6;
+    border-left: 4px solid #dedede;
+}
+
+.format-quote .entry-title:before,
+.format-video .entry-title:before,
+.format-image .entry-title:before,
+.format-link .entry-title:before,
+.format-gallery .entry-title:before,
+.format-audio .entry-title:before,
+.format-status .entry-title:before,
+.format-chat .entry-title:before,
+.sticky .entry-title:before {
+    font-family: 'simple-line-icons';
+    font-size: 18px;
+    width:28px;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    float: right;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.format-quote .entry-title:before {
+    content:"\e02c";
+}
+.format-video .entry-title:before {
+    content:"\e03a";
+}
+.format-image .entry-title:before {
+    content:"\e07f";
+}
+.format-link .entry-title:before {
+    content:"\e08d";
+}
+.format-gallery .entry-title:before {
+    content:"\e034";
+}
+.format-audio .entry-title:before {
+    content:"\e061";
+}
+.format-status .entry-title:before {
+    content:"\e021";
+}
+.format-chat .entry-title:before {
+    content:"\e04a";
+}
+.sticky .entry-title:before {
+    content:"\e031";
+}
+/*-----------------------------
+# Archives page
+------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin-bottom:1.5em;
+}
+.updated:not(.published){
+	display: none;
+}
+.page-header {
+    margin-top: $base__spacing;
+}
