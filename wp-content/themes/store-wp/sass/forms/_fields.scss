@@ -1,0 +1,53 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	border: 1px solid $color__border-input;
+	@include border-radius(3px);
+	padding: $small__spacing/1.8 $small__spacing;
+	&:focus {
+        outline-color: transparent;
+        outline-style: none;
+	}
+}
+
+select {
+	border: 1px solid $color__border-input;
+    height: 36px;
+    background: rgba(255,255,255,.9);
+}
+
+textarea {
+    overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+    padding: 1em;
+    vertical-align: top; /* Improves readability and alignment in all browsers */
+    width: 100%;
+    line-height:1.5em;
+}
+legend {
+    @extend h2;
+}
+input[type="search"] {
+    -webkit-appearance: none;
+}
+label {
+    font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}

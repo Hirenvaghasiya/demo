@@ -1,0 +1,47 @@
+.site-header {
+    background: #fff;
+    .site-branding {
+        @include outer-container();
+        display: block;
+        text-align: center;
+        h1.site-title,
+        h1.site-title a {
+            margin: $base__spacing/3 0 $base__spacing/2 0;
+            padding: 0;
+            display: block;
+            font-weight: normal;
+        }
+    }
+    .site-description {
+        @include media(769px) { text-align: left; }
+        display: block;
+        margin: 0;
+        padding:.8em 1.5em;
+        @include font-size(.9);
+        text-align: left;
+    }
+    //header navigation
+    .header-nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            display: block;
+            list-style: none;
+            text-align: right;
+            padding:.8em 1.5em;
+            @include font-size(.9);
+            li {
+                display: inline-block;
+                *display: inline;
+                padding:0 .8em;
+            }
+        }
+    }
+}
+
+@include media(max-width 770px) {
+    .site-description,
+    .header-nav ul {
+        text-align: center!important; 
+    }
+}
